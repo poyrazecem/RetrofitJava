@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Coin"
+          android:icon="@drawable/coin"
+          android:id="@+id/coin"/>
+
+    <item android:title="Nft"
+          android:icon="@drawable/nft"
+        android:id="@+id/nft"/>
+
+    <item android:title="News"
+        android:icon="@drawable/news"
+        android:id="@+id/news"/>
+</menu>

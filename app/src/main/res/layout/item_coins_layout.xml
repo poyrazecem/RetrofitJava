@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:topLeftRadius="32dp"
+    android:topRightRadius="32dp"
+    android:bottomLeftRadius="32dp"
+    android:bottomRightRadius="32dp"
+
+    >
+    <TextView
+        android:id="@+id/coinsName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="24sp"
+        android:text="Coins Name" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/coinicon"
+            android:layout_width="97dp"
+            android:layout_height="82dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/coinsPrice"
+            android:layout_width="185dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="79dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="115dp"
+            android:text="Coins Price"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/twitterUrl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/coinicon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/twitterUrl"
+            android:layout_width="193dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="79dp"
+            android:layout_marginEnd="115dp"
+            android:text="Twitter URL"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/coinicon"
+            app:layout_constraintTop_toBottomOf="@+id/coinsPrice" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>
