@@ -7,10 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="2dp"
-    android:topLeftRadius="32dp"
-    android:topRightRadius="32dp"
-    android:bottomLeftRadius="32dp"
-    android:bottomRightRadius="32dp"
+
 
     >
     <TextView
@@ -22,11 +19,13 @@
         android:layout_marginBottom="10dp"
         android:layout_marginEnd="10dp"
         android:textSize="24sp"
+        android:textStyle="bold|italic"
         android:text="Coins Name" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         >
 
         <ImageView
@@ -46,6 +45,7 @@
             android:layout_marginEnd="115dp"
             android:text="Coins Price"
             android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/twitterUrl"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/coinicon"
@@ -53,8 +53,8 @@
 
         <TextView
             android:id="@+id/twitterUrl"
-            android:layout_width="193dp"
-            android:layout_height="51dp"
+            android:layout_width="286dp"
+            android:layout_height="27dp"
             android:layout_marginStart="79dp"
             android:layout_marginEnd="115dp"
             android:text="Twitter URL"

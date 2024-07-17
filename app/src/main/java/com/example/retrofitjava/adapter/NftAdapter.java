@@ -1,23 +1,18 @@
 package com.example.retrofitjava.adapter;
 
-import android.graphics.Color;
-import android.graphics.drawable.Icon;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.example.retrofitjava.R;
-import com.example.retrofitjava.model.NftModel;
 import com.example.retrofitjava.model.NftPageModel;
-import com.example.retrofitjava.network.ServiceGenerator;
 import com.squareup.picasso.Picasso;
+
 
 import java.util.List;
 
@@ -44,16 +39,11 @@ public class NftAdapter extends RecyclerView.Adapter<NftAdapter.RowHolder>{
         holder.textnft.setText(nftList.get(position).name);
         holder.source.setText("" + nftList.get(position).source);
 
+
         Picasso.get()
                 .load(nftList.get(position).img)
                 .into(holder.nftImageView);
 
-        //holder.imageView5.setImageIcon(Icon.createWithContentUri(nftList.get(position).img));
-        //intent.putExtra("image_name",nftList.get(position).getPhoto());
-       /* Glide.with(holder.itemView.getContext())
-                .load(NftPageModel.img) // img değişkeni ile resim URL'sini yükle
-                .into(holder.nftImageView); */
-        
 
 
     }

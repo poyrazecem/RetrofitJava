@@ -19,6 +19,7 @@ public class ServiceGenerator {
 
     public static final String CRYPTO_URL = BASE_URL + "/coins";
     public static final String NFT_URL = BASE_URL + "/nft/trending";
+    public static final String NEWS_URL = BASE_URL + "/news";
     public static final String API_KEY = "LAjo7LL7qChk4iYXdazJu+TjFQXnSzJeE+iSx3BMZm8=";
 
     private static ServiceGenerator serviceGenerator;

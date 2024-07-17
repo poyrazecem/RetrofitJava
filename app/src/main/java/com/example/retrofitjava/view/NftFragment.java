@@ -74,7 +74,7 @@ public class NftFragment extends Fragment {
                     nftList = response.body().getResult();
                     //binding.rvnft.setLayoutManager(new LinearLayoutManager(getContext()));
 
-                    StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+                    StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL );
                     binding.rvnft.setLayoutManager(staggeredGridLayoutManager);
 
                     NftAdapter = new NftAdapter(nftList);
@@ -93,14 +93,4 @@ public class NftFragment extends Fragment {
 }
 
 
-/* Retrofit ile veriyi çek ve Glide ile resmi yükle
-        apiService.getNft(nftPageModel.id).enqueue(new Callback<NftModel>() {
-            @Override
-            public void onResponse(Call<NftModel> call, Response<NftModel> response) {
-                if (response.isSuccessful() && response.body() != null) {
-                    NftModel nftModel = response.body();
-                    Glide.with(holder.itemView.getContext())
-                        .load(nftModel.imageUrl)
-                        .into(holder.imageView);
-                }
-            } */
+

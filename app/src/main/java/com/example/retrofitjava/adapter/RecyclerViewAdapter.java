@@ -20,7 +20,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private List<CryptoModel> cryptoList;
 
-    private String[] colors = {"#F50057","#EA80FC","#AED581","#F4FF81","#FFA726","#90A4AE"};
+    private String[] colors = {"#37B8F8","#3EB7F4","#3DA0D1","#3699CC","#3693C1","#4CAAD9"};
 
 public RecyclerViewAdapter (List<CryptoModel> cryptoList){
     this.cryptoList = cryptoList;

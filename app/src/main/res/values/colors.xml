@@ -6,7 +6,12 @@
     <color name="green">#AED581</color>
     <color name="yellow">#F4FF81</color>
     <color name="darkyellow">#FFA726</color>
-    <color name="grey">#90A4AE</color>
+    <color name="blue">#37B8F8</color>
+    <color name="blue1">#3EB7F4</color>
+    <color name="blue2">#3DA0D1</color>
+    <color name="blue3">#3699CC</color>
+    <color name="blue4">#3693C1</color>
+    <color name="blue5">#4CAAD9</color>
 
 
 </resources>
