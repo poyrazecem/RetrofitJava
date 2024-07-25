@@ -1,7 +1,9 @@
 package com.example.retrofitjava.service;
 
 import com.example.retrofitjava.model.CryptoModelResult;
+import com.example.retrofitjava.model.NewsDetailsModelResult;
 import com.example.retrofitjava.model.NewsModelResult;
+import com.example.retrofitjava.model.NewsPageModel;
 import com.example.retrofitjava.model.NftModelResult;
 import com.example.retrofitjava.network.ServiceGenerator;
 
@@ -10,6 +12,7 @@ import java.util.Date;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface GenericCallsService {
@@ -31,4 +34,9 @@ public interface GenericCallsService {
             @Query("page") int page,
             @Query("limit") int limit);
 
-}
+
+        @GET(ServiceGenerator.NEWS_URL + "/{id}")
+        Call<NewsPageModel> getNewsDetailPageModel(
+                @Path("id") String id);
+    }
+

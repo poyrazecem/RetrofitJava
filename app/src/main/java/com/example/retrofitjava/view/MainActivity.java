@@ -41,19 +41,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(view);
         context = getApplicationContext();
 
-        bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        frameLayout = findViewById(R.id.frameLayout);
 
-        //RecyclerView rvnft = findViewById(R.id.rvnft); // RecyclerView'ı layout dosyanızdan alın
-        //StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-        //rvnft.setLayoutManager(staggeredGridLayoutManager);
-
-
-        // İlk olarak HomeFragment'i yükle
-    /*    if (savedInstanceState == null) {
-            loadFragment(new HomeFragment(), false);
-        }*/
-        // İlk olarak HomeFragment'i yükle
 
         binding.bottomNavigationView.setOnNavigationItemSelectedListener(item ->  {
             int id = item.getItemId();
@@ -68,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         loadFragment(new HomeFragment(), false);
+
+
     }
 
     private void loadFragment (Fragment fragment, boolean isAppInitiazlized) {

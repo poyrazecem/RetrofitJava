@@ -1,0 +1,8 @@
+<!-- res/drawable/bottom_nav_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:topLeftRadius="46dp"
+        android:topRightRadius="46dp"
+        android:bottomLeftRadius="46dp"
+        android:bottomRightRadius="46dp"/>
+    <solid android:color="@color/lightblue" />
+</shape>
