@@ -110,6 +110,7 @@ public class RegisterFragment extends Fragment {
 
     private void updateUI(FirebaseUser user) {
         if (user != null) {
+
             loadFragment(new LoginFragment(), false);
             Toast.makeText(getActivity(), "Üyelik işleminiz başarıyla tamamlanmıştır.", Toast.LENGTH_SHORT).show();
         } else {
@@ -122,9 +123,9 @@ public class RegisterFragment extends Fragment {
         FragmentManager fragmentManager = getParentFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         if (isAppInitiazlized) {
-            fragmentTransaction.add(R.id.main, fragment);
+            fragmentTransaction.add(R.id.main2, fragment);
         } else {
-            fragmentTransaction.replace(R.id.main, fragment);
+            fragmentTransaction.replace(R.id.main2, fragment);
         }
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();

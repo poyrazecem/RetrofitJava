@@ -42,19 +42,26 @@ public class LogResActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(view);
         context = getApplicationContext();
+
+
         loadFragment(new LoginFragment(), false);
     }
+
+
+
+
+
 
     private void loadFragment(Fragment fragment, boolean isAppInitiazlized) {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         if (isAppInitiazlized) {
-            fragmentTransaction.add(R.id.main, fragment);
+            fragmentTransaction.add(R.id.main2, fragment);
         } else {
-            fragmentTransaction.replace(R.id.main, fragment);
+            fragmentTransaction.replace(R.id.main2, fragment);
         }
-        fragmentTransaction.addToBackStack(null);
+       fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 

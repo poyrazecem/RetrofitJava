@@ -9,6 +9,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -37,6 +38,7 @@ import java.util.Map;
 
 public class LoginFragment extends Fragment {
 
+    private LogResActivity host;
     private FragmentLoginBinding binding;
     private FirebaseAuth mAuth;
 
@@ -44,7 +46,7 @@ public class LoginFragment extends Fragment {
         // FragmentHomeBinding ile layout dosyasını bağlama
         binding = FragmentLoginBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
-
+        host = (LogResActivity) getActivity();
         mAuth = FirebaseAuth.getInstance();
         binding.buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,11 +91,12 @@ public class LoginFragment extends Fragment {
 
     private void updateUI(FirebaseUser user) {
         if (user != null) {
-            Intent intent = new Intent(getActivity(), MainActivity.class);
+            Intent intent = new Intent(host, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
-            getActivity().finish();
+            getActivity();
         } else {
-            Toast.makeText(getActivity(), "Please sign in or register", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Please Login", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -108,9 +111,9 @@ public class LoginFragment extends Fragment {
         FragmentManager fragmentManager = getParentFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         if (isAppInitiazlized) {
-            fragmentTransaction.add(R.id.main, fragment);
+            fragmentTransaction.add(R.id.main2, fragment);
         } else {
-            fragmentTransaction.replace(R.id.main, fragment);
+            fragmentTransaction.replace(R.id.main2, fragment);
         }
         fragmentTransaction.commit();
 

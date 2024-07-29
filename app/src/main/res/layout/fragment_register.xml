@@ -37,20 +37,20 @@
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="20dp"
                 android:shadowColor="@color/black"
                 android:text="REGİSTER"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold|italic" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayoutEnterPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12dp"
                 app:counterEnabled="true"
                 app:counterMaxLength="15"
                 app:passwordToggleEnabled="true">
@@ -59,7 +59,7 @@
                     android:id="@+id/editText_email_register"
                     android:layout_width="match_parent"
                     android:layout_height="51dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="12dp"
                     android:background="@color/lightblue"
                     android:hint="Enter your email"
                     android:textStyle="bold"
@@ -111,7 +111,7 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:backgroundTint="@color/black"
                 android:text="Register" />
 

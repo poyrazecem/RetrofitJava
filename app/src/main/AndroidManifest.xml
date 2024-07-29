@@ -28,6 +28,9 @@
             android:name=".view.NewsFragment"
             android:exported="false" />
         <activity
+            android:name=".view.MainActivity"
+            android:exported="true" />
+        <activity
             android:name=".view.LogResActivity"
             android:exported="true">
             <intent-filter>

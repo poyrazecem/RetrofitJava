@@ -29,14 +29,6 @@
             app:destination="@id/newsDetailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/homeFragment3"
-        android:name="com.example.retrofitjava.view.HomeFragment"
-        android:label="HomeFragment" >
-        <action
-            android:id="@+id/action_homeFragment3_to_nftFragment"
-            app:destination="@id/nftFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/newsDetailsFragment"
         android:name="com.example.retrofitjava.view.NewsDetailsFragment"
         android:label="fragment_news_details"
@@ -65,5 +57,13 @@
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.retrofitjava.view.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_nftFragment2"
+            app:destination="@id/nftFragment" />
     </fragment>
 </navigation>
