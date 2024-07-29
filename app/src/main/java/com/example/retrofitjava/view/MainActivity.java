@@ -21,9 +21,12 @@ import com.example.retrofitjava.R;
 import com.example.retrofitjava.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
+    private FirebaseAuth mAuth;
     private BottomNavigationView bottomNavigationView;
     private FrameLayout frameLayout;
 
@@ -41,19 +44,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(view);
         context = getApplicationContext();
 
-        bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        frameLayout = findViewById(R.id.frameLayout);
-
-        //RecyclerView rvnft = findViewById(R.id.rvnft); // RecyclerView'ı layout dosyanızdan alın
-        //StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-        //rvnft.setLayoutManager(staggeredGridLayoutManager);
-
-
-        // İlk olarak HomeFragment'i yükle
-    /*    if (savedInstanceState == null) {
-            loadFragment(new HomeFragment(), false);
-        }*/
-        // İlk olarak HomeFragment'i yükle
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            setContentView(R.layout.activity_main);
+        }
 
         binding.bottomNavigationView.setOnNavigationItemSelectedListener(item ->  {
             int id = item.getItemId();
@@ -67,8 +62,12 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
 
-        loadFragment(new HomeFragment(), false);
+       loadFragment(new HomeFragment(), false);
+
+
     }
+
+
 
     private void loadFragment (Fragment fragment, boolean isAppInitiazlized) {
 
@@ -79,8 +78,12 @@ public class MainActivity extends AppCompatActivity {
         } else {
             fragmentTransaction.replace(R.id.frameLayout,fragment);
         }
+
         fragmentTransaction.commit();
 }
+
+
+
 }
 
 

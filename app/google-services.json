@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "572582312890",
+    "project_id": "intern-project-e5098",
+    "storage_bucket": "intern-project-e5098.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572582312890:android:801273b393ed627cb57b83",
+        "android_client_info": {
+          "package_name": "com.example.retrofitjava"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC62jPGsTbKQFswb7eMJGSwMWYkiDr4czA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.retrofitjava.model.CryptoModel;
 import com.example.retrofitjava.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -40,7 +41,11 @@ public RecyclerViewAdapter (List<CryptoModel> cryptoList){
       holder.textName.setText(cryptoList.get(position).name);
       holder.textPrice.setText("" + cryptoList.get(position).price);
       holder.twitterUrl.setText(cryptoList.get(position).twitterUrl);
-      holder.coinicon.setImageIcon(Icon.createWithContentUri(cryptoList.get(position).icon));
+      //holder.coinicon.setImageIcon(Icon.createWithContentUri(cryptoList.get(position).icon));
+
+        Picasso.get()
+                .load(cryptoList.get(position).icon)
+                .into(holder.coinicon);
     }
 
     @Override

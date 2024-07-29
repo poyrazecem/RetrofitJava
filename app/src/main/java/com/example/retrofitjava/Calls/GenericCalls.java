@@ -2,8 +2,11 @@ package com.example.retrofitjava.Calls;
 
 import com.example.retrofitjava.model.CoinsModel;
 import com.example.retrofitjava.model.CryptoModelResult;
+import com.example.retrofitjava.model.NewsDetailsModel;
+import com.example.retrofitjava.model.NewsDetailsModelResult;
 import com.example.retrofitjava.model.NewsModel;
 import com.example.retrofitjava.model.NewsModelResult;
+import com.example.retrofitjava.model.NewsPageModel;
 import com.example.retrofitjava.model.NftModel;
 import com.example.retrofitjava.model.NftModelResult;
 import com.example.retrofitjava.network.ServiceGenerator;
@@ -37,5 +40,13 @@ public class GenericCalls {
         call.enqueue(callback);
         return call;
     }
+
+    public static Call<NewsPageModel> getNewsDetailsModels(String id, Callback<NewsPageModel> callback) {
+        GenericCallsService service = ServiceGenerator.with().createService(GenericCallsService.class);
+        Call<NewsPageModel> call = service.getNewsDetailPageModel(id);
+        call.enqueue(callback);
+        return call;
+    }
+
 
 }
